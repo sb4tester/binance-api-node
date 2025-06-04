@@ -426,7 +426,8 @@ const allMiniTickers = (cb, transform = true, variator) => {
     )
   }
 
-  return options => w => w.close(1000, 'Close handle was called', { keepClosed: true, ...options })
+  return options =>
+    w.close(1000, 'Close handle was called', { keepClosed: true, ...options })
 }
 
 const customSubStream = (payload, cb, variator) => {
